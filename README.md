@@ -17,21 +17,21 @@ The first project from the Common Core Curriculum. It's about creating your pers
 | memmove |  |
 | strlcpy |  |
 | strlcat |  |
-| toupper |  |
-| tolower |  |
-| strchr |  |
-| strrchr |  |
-| strncmp |  |
+| toupper | <p align="center">✅</p> |
+| tolower | <p align="center">✅</p> |
+| strchr | <p align="center">✅</p> |
+| strrchr | <p align="center">✅</p> |
+| strncmp | <p align="center">✅</p> |
 | mrmchr |  |
 | mrmcmp |  |
 | strnstr |  |
 | atoi | <p align="center">✅</p> |
 | calloc |  |
-| strdup |  |
+| strdup | <p align="center">✅</p> |
 
 | Mandatory (II) | Status     |
 | :-------- | :------- |
-| ft_substr |  |
+| ft_substr | <p align="center">✅</p> |
 | ft_strjoin |  |
 | ft_strtrim |  |
 | ft_split | <p align="center">✅</p> |
