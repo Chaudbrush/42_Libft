@@ -3,6 +3,8 @@ The first project from the Common Core Curriculum. It's about creating your pers
 
 ---
 
+I'm still in the early phases of corrections, I'm marking the ones I did, the green check doesn't guarantee they are corrected.
+
 | Mandatory (I) | Status     |
 | :-------- | :------- |
 | isalpha | <p align="center">✅</p> |
