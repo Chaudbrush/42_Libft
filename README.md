@@ -11,20 +11,20 @@ The first project from the Common Core Curriculum. It's about creating your pers
 | isascii | <p align="center">✅</p> |
 | isprint | <p align="center">✅</p> |
 | strlen | <p align="center">✅</p> |
-| memset |  |
-| bzero |  |
-| memcpy |  |
-| memmove |  |
-| strlcpy |  |
-| strlcat |  |
+| memset | <p align="center">✅</p> |
+| bzero | <p align="center">✅</p> |
+| memcpy | <p align="center">✅</p> |
+| memmove | <p align="center">✅</p> |
+| strlcpy | <p align="center">✅</p> |
+| strlcat | <p align="center">✅</p> |
 | toupper | <p align="center">✅</p> |
 | tolower | <p align="center">✅</p> |
 | strchr | <p align="center">✅</p> |
 | strrchr | <p align="center">✅</p> |
 | strncmp | <p align="center">✅</p> |
-| mrmchr |  |
-| mrmcmp |  |
-| strnstr |  |
+| mrmchr | <p align="center">✅</p> |
+| mrmcmp | <p align="center">✅</p> |
+| strnstr | <p align="center">✅</p> |
 | atoi | <p align="center">✅</p> |
 | calloc |  |
 | strdup | <p align="center">✅</p> |
@@ -32,12 +32,12 @@ The first project from the Common Core Curriculum. It's about creating your pers
 | Mandatory (II) | Status     |
 | :-------- | :------- |
 | ft_substr | <p align="center">✅</p> |
-| ft_strjoin |  |
-| ft_strtrim |  |
+| ft_strjoin | <p align="center">✅</p> |
+| ft_strtrim | <p align="center">✅</p> |
 | ft_split | <p align="center">✅</p> |
 | ft_itoa | <p align="center">✅</p> |
-| ft_strmapi |  |
-| ft_striteri |  |
+| ft_strmapi | <p align="center">✅</p> |
+| ft_striteri | <p align="center">✅</p> |
 | ft_putchar_fd | <p align="center">✅</p> |
 | ft_putstr_fd | <p align="center">✅</p> |
 | ft_putendl_fd | <p align="center">✅</p> |
@@ -45,11 +45,11 @@ The first project from the Common Core Curriculum. It's about creating your pers
 
 | Bonus | Status     |
 | :-------- | :------- |
-| ft_lstnew |  |
-| ft_lstadd_front |  |
-| ft_lstsize |  |
-| ft_lstlast |  |
-| ft_lstadd_back |  |
+| ft_lstnew | <p align="center">✅</p> |
+| ft_lstadd_front | <p align="center">✅</p> |
+| ft_lstsize | <p align="center">✅</p> |
+| ft_lstlast | <p align="center">✅</p> |
+| ft_lstadd_back | <p align="center">✅</p> |
 | ft_lstdelone |  |
 | ft_lstclear |  |
 | ft_lstiter |  |
@@ -58,4 +58,4 @@ The first project from the Common Core Curriculum. It's about creating your pers
 ---
 
 ## Testing
-Currently, I'm using [libft-unit-tester](https://github.com/alelievr/libft-unit-test) to test my library and check my progress.
+Currently, I'm using personal tests and [libftTester](https://github.com/Tripouille/libftTester) to test my library and check my progress.
