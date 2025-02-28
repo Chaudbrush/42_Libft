@@ -1,39 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vloureir <vloureir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/25 11:59:45 by vloureir          #+#    #+#             */
-/*   Updated: 2025/02/26 19:05:42 by vloureir         ###   ########.fr       */
+/*   Created: 2025/02/25 12:13:40 by vloureir          #+#    #+#             */
+/*   Updated: 2025/02/25 13:15:13 by vloureir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
-{
-	unsigned int	i;
-	char			*dest;
+// SEG FAULT IF DONT FIND A MATCH??
 
-	dest = malloc(sizeof(char) * (len + 1));
-	if (!dest)
-		return (NULL);
+char	*ft_strnstr(char const *big, char const *little, size_t len)
+{
+	size_t	i;
+	int		j;
+
+	if (*little == '\0')
+		return ((char *)big);
 	i = 0;
-	while (i < len)
+	while (big[i] && i < len)
 	{
-		dest[i] = s[start + i];
+		j = 0;
+		while (big[i + j] == little[j])
+		{
+			if (little[j + 1] == '\0')
+				return ((char *)&big[i]);
+			j++;
+		}
 		i++;
 	}
-	return (dest);
+	return (NULL);
 }
 /*
 int	main(void)
 {
-	char	*string = "Abracadabra";
-	char	*new;
+	char	*bigstr = "Foo Bar Baz";
+	char	*smallstr = "Bar";
+	char	*ptr;
 
-	new = ft_substr(string, 4, 7);
-	printf("%s\n", new);
+	ptr = ft_strnstr(bigstr, smallstr, 4);
+	printf("%s\n", ptr);
 }*/

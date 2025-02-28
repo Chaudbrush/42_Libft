@@ -6,9 +6,11 @@
 /*   By: vloureir <vloureir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/22 18:49:19 by vloureir          #+#    #+#             */
-/*   Updated: 2025/02/24 16:43:24 by vloureir         ###   ########.fr       */
+/*   Updated: 2025/02/28 20:10:14 by vloureir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_atoi(char *str)
 {

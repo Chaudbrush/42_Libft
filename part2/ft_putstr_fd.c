@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 void	ft_putstr_fd(char *s, int fd)
 {
@@ -20,8 +20,8 @@ void	ft_putstr_fd(char *s, int fd)
 	while (s[++i])
 		write(fd, &s[i], 1);
 }
-
+/*
 int	main(void)
 {
 	ft_putstr_fd("Hello hello 42", 1);
-}
+}*/

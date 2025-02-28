@@ -10,8 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
+#include "libft.h"
 
 int	word_count(char const *s, char c)
 {
@@ -104,7 +103,7 @@ char	**ft_split(char const *s, char c)
 	ft_populate(argv, s, c);
 	return (argv);
 }
-
+/*
 int	main(void)
 {
 	int		i;
@@ -119,4 +118,4 @@ int	main(void)
 		printf("%s\n", result[i]);
 		i++;
 	}
-}
+}*/

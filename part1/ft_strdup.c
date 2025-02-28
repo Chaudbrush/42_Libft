@@ -6,11 +6,11 @@
 /*   By: vloureir <vloureir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/25 10:27:03 by vloureir          #+#    #+#             */
-/*   Updated: 2025/02/25 10:30:40 by vloureir         ###   ########.fr       */
+/*   Updated: 2025/02/26 18:58:35 by vloureir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 char	*ft_strdup(const char *s)
 {
@@ -21,10 +21,10 @@ char	*ft_strdup(const char *s)
 	while (s[i])
 		i++;
 	dest = malloc(sizeof(char) * (i + 1));
-	if (!str)
-		returrn (NULL);
+	if (!s)
+		return (NULL);
 	i = -1;
-	while(s[++i])
+	while (s[++i])
 		dest[i] = s[i];
 	dest[i] = '\0';
 	return (dest);
