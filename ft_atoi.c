@@ -1,24 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vloureir <vloureir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/27 18:01:24 by vloureir          #+#    #+#             */
-/*   Updated: 2025/02/28 20:09:37 by vloureir         ###   ########.fr       */
+/*   Created: 2025/02/22 18:49:19 by vloureir          #+#    #+#             */
+/*   Updated: 2025/02/28 20:10:14 by vloureir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd_back(t_list **lst, t_list *new)
+int	ft_atoi(const char *nptr)
 {
-	t_list	*ptr;
+	int	i;
+	int	nb;
+	int	sign;
 
-	ptr = lst;
-	while (ptr->next != NULL)
-		ptr = ptr->next;
-	ptr->next = new;
-	new->next = NULL;
+	i = 0;
+	nb = 0;
+	sign = 1;
+	while (nptr[i] == ' ' || (nptr[i] >= '\t' && nptr[i] <= '\r'))
+		i++;
+	if (nptr[i] == '-' || nptr[i] == '+')
+	{
+		if (nptr[i] == '-')
+			sign = -sign;
+		i++;
+	}
+	while (nptr[i] >= '0' && nptr[i] <= '9')
+	{
+		nb = (nb * 10) + (nptr[i] - '0');
+		i++;
+	}
+	return (nb * sign);
 }

@@ -6,11 +6,13 @@
 /*   By: vloureir <vloureir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/25 12:13:40 by vloureir          #+#    #+#             */
-/*   Updated: 2025/02/25 13:15:13 by vloureir         ###   ########.fr       */
+/*   Updated: 2025/03/02 11:16:17 by vloureir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <unistd.h>
+#include <stdio.h>
 
 // SEG FAULT IF DONT FIND A MATCH??
 
@@ -38,10 +40,14 @@ char	*ft_strnstr(char const *big, char const *little, size_t len)
 /*
 int	main(void)
 {
+	int		i;
 	char	*bigstr = "Foo Bar Baz";
 	char	*smallstr = "Bar";
 	char	*ptr;
 
-	ptr = ft_strnstr(bigstr, smallstr, 4);
-	printf("%s\n", ptr);
+	ptr = ft_strnstr("aaabcabcd", "cd", 8);
+	i = -1;
+	while (ptr[++i])
+		write(1, &ptr[i], 1);
+	write(1, "\n", 1);
 }*/

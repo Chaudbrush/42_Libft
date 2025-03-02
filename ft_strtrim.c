@@ -50,6 +50,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	i = 0;
 	first_index = -1;
+	last_index = -1;
 	while (s1[i])
 	{
 		while (is_set((char *)set, s1[i]) && s1[i])
@@ -64,6 +65,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 		}
 	}
 	len = last_index - first_index + 1;
+	if (len < 0)
+		return (NULL);
 	new = malloc(sizeof(char) * (len + 1));
 	ft_strncopy(new, (char *)&s1[first_index], len);
 	return (new);

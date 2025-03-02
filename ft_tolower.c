@@ -1,23 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vloureir <vloureir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/22 18:46:44 by vloureir          #+#    #+#             */
-/*   Updated: 2025/02/22 18:47:29 by vloureir         ###   ########.fr       */
+/*   Created: 2025/02/25 10:12:38 by vloureir          #+#    #+#             */
+/*   Updated: 2025/02/25 10:13:18 by vloureir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlen(char *str)
+int	ft_tolower(int c)
 {
-	int	i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
+	if (c >= 'A' && c <= 'Z')
+		c += 32;
+	return (c);
 }
