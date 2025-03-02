@@ -66,6 +66,8 @@ I'm still in the early phases of corrections, I'm marking the ones I did, the gr
 | ft_strnstr | Norm (25 lines) and Segfault if can't find match |
 | ft_substr | SIGSEGV! Where am I touching forbidden memory? |
 | ft_strtrim | SIGSEGV! Where am I touching forbidden memory? |
+| ft_lstlast | SIGSEGV! Need to check better |
+| ft_lstadd_back | SIGSEGV! Need to check better |
 
 ## Testing
 Currently, I'm using personal tests and [libftTester](https://github.com/Tripouille/libftTester) to test my library and check my progress.
