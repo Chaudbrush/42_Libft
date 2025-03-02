@@ -28,7 +28,7 @@ I'm still in the early phases of corrections, I'm marking the ones I did, the gr
 | mrmcmp | <p align="center">✅</p> |
 | strnstr | <p align="center">✅</p> |
 | atoi | <p align="center">✅</p> |
-| calloc |  |
+| calloc | <p align="center">✅</p> |
 | strdup | <p align="center">✅</p> |
 
 | Mandatory (II) | Status     |
@@ -58,6 +58,14 @@ I'm still in the early phases of corrections, I'm marking the ones I did, the gr
 | ft_lstmap |  |
 
 ---
+
+## Necessary Corrections
+| Function | Error     |
+| :-------- | :------- |
+| ft_memset | Fail if memory overlap, how to solve it without VLA? |
+| ft_strnstr | Norm (25 lines) and Segfault if can't find match |
+| ft_substr | SIGSEGV! Where am I touching forbidden memory? |
+| ft_strtrim | SIGSEGV! Where am I touching forbidden memory? |
 
 ## Testing
 Currently, I'm using personal tests and [libftTester](https://github.com/Tripouille/libftTester) to test my library and check my progress.
