@@ -59,7 +59,7 @@ I'm still in the early phases of corrections, I'm marking the ones I did, the gr
 
 ---
 
-## Necessary Corrections
+### Necessary Corrections
 | Function | Error     |
 | :-------- | :------- |
 | ft_memset | Fail if memory overlap, how to solve it without VLA? |
@@ -69,5 +69,5 @@ I'm still in the early phases of corrections, I'm marking the ones I did, the gr
 | ft_lstlast | SIGSEGV! Need to check better |
 | ft_lstadd_back | SIGSEGV! Need to check better |
 
-## Testing
+### Testing
 Currently, I'm using personal tests and [libftTester](https://github.com/Tripouille/libftTester) to test my library and check my progress.
