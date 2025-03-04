@@ -52,22 +52,22 @@ I'm still in the early phases of corrections, I'm marking the ones I did, the gr
 | ft_lstsize | <p align="center">✅</p> |
 | ft_lstlast | <p align="center">✅</p> |
 | ft_lstadd_back | <p align="center">✅</p> |
-| ft_lstdelone |  |
-| ft_lstclear |  |
-| ft_lstiter |  |
-| ft_lstmap |  |
+| ft_lstdelone | <p align="center">✅</p> |
+| ft_lstclear | <p align="center">✅</p> |
+| ft_lstiter | <p align="center">✅</p> |
+| ft_lstmap | <p align="center">✅</p> |
 
 ---
 
 ### Necessary Corrections
 | Function | Error     |
 | :-------- | :------- |
-| ft_memset | Fail if memory overlap, how to solve it without VLA? |
-| ft_strnstr | Norm (25 lines) and Segfault if can't find match |
 | ft_substr | SIGSEGV! Where am I touching forbidden memory? |
-| ft_strtrim | SIGSEGV! Where am I touching forbidden memory? |
+| ft_strtrim | SIGSEGV! Where am I touching forbidden memory? and 25 lines|
 | ft_lstlast | SIGSEGV! Need to check better |
 | ft_lstadd_back | SIGSEGV! Need to check better |
+| ft_lstdelone | ??? |
+| ft_lstmap | SIGSEGV! Need to check better |
 
 ---
 
