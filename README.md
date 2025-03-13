@@ -1,9 +1,7 @@
 # 42_Libft
-The first project from the Common Core Curriculum. It's about creating your personal library with useful functions to be used in the future.
+This project consists in creating a personal library with useful functions to be used during the 42 School curriculum.
 
 ---
-
-I'm still in the early phases of corrections, I'm marking the ones I did, the green check doesn't guarantee they are corrected.
 
 | Mandatory (I) | Status     |
 | :-------- | :------- |
@@ -24,8 +22,8 @@ I'm still in the early phases of corrections, I'm marking the ones I did, the gr
 | strchr | <p align="center">✅</p> |
 | strrchr | <p align="center">✅</p> |
 | strncmp | <p align="center">✅</p> |
-| mrmchr | <p align="center">✅</p> |
-| mrmcmp | <p align="center">✅</p> |
+| memchr | <p align="center">✅</p> |
+| memcmp | <p align="center">✅</p> |
 | strnstr | <p align="center">✅</p> |
 | atoi | <p align="center">✅</p> |
 | calloc | <p align="center">✅</p> |
@@ -62,14 +60,21 @@ I'm still in the early phases of corrections, I'm marking the ones I did, the gr
 ### Necessary Corrections
 | Function | Error     |
 | :-------- | :------- |
-| ft_substr | SIGSEGV! Where am I touching forbidden memory? |
-| ft_strtrim | SIGSEGV! Where am I touching forbidden memory? and 25 lines|
-| ft_lstlast | SIGSEGV! Need to check better |
-| ft_lstadd_back | SIGSEGV! Need to check better |
-| ft_lstdelone | ??? |
-| ft_lstmap | SIGSEGV! Need to check better |
+| ft_substr | SIGSEGV! |
+| ft_strtrim | SIGSEGV! and 25 lines|
 
 ---
 
+### How to use?
+Compile the `main.c` file with the libft library and run the program:
+
+```bash
+cc main.c libft.a
+```
+
 ### Testing
-Currently, I'm using personal tests and [libftTester](https://github.com/Tripouille/libftTester) to test my library and check my progress.
+I'm using personal tests to test the functions individually. Below are some other testers Im using to make sure everything is correct.
+
+| Tester | Author     |
+| :-------- | :------- |
+| [libftTester](https://github.com/Tripouille/libftTester) | `Tripouille` |
