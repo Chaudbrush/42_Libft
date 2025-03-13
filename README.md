@@ -60,8 +60,8 @@ This project consists in creating a personal library with useful functions to be
 ### Necessary Corrections
 | Function | Error     |
 | :-------- | :------- |
-| ft_substr | SIGSEGV! |
-| ft_strtrim | SIGSEGV! and 25 lines|
+| ft_substr | SIGSEGV |
+| ft_strtrim | SIGSEGV and 25 lines|
 
 ---
 
@@ -71,6 +71,8 @@ Compile the `main.c` file with the libft library and run the program:
 ```bash
 cc main.c libft.a
 ```
+
+---
 
 ### Testing
 I'm using personal tests to test the functions individually. Below are some other testers Im using to make sure everything is correct.
