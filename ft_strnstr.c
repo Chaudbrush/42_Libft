@@ -14,8 +14,6 @@
 #include <unistd.h>
 #include <stdio.h>
 
-// SEG FAULT IF DONT FIND A MATCH??
-
 char	*ft_strnstr(char const *big, char const *little, size_t len)
 {
 	size_t	i;
@@ -27,7 +25,7 @@ char	*ft_strnstr(char const *big, char const *little, size_t len)
 	while (big[i] && i < len)
 	{
 		j = 0;
-		while (big[i + j] == little[j])
+		while (big[i + j] == little[j] && i + j < len)
 		{
 			if (little[j + 1] == '\0')
 				return ((char *)&big[i]);

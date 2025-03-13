@@ -6,7 +6,7 @@
 #    By: vloureir <vloureir@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/23 17:39:54 by vloureir          #+#    #+#              #
-#    Updated: 2025/03/02 11:35:44 by vloureir         ###   ########.fr        #
+#    Updated: 2025/03/04 09:18:03 by vloureir         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,7 @@ SOURCE := ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
 		  ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
 OBJECTS := $(SOURCE:.c=.o)
 BONUS := ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c \
-		 ft_lstadd_back.c #ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c
+		 ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c
 OBJ_BONUS := $(BONUS:.c=.o)
 CFLAGS := -Wall -Wextra -Werror
 RM := rm -f

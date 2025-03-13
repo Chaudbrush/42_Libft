@@ -15,18 +15,12 @@
 void	*ft_calloc(size_t nmemb, size_t size)
 {
 	size_t	mult;
-	void	*ptr;
+	void			*ptr;
 
-	if ((int)nmemb < 0 || (int)size < 0)
-		return (NULL);
 	if (nmemb == 0 || size == 0)
-	{
-		ptr = malloc(1);
-		*(char *)ptr = '1';
-		return (ptr);
-	}
+		return (malloc(0));
 	mult = nmemb * size;
-	if (mult > __INT_MAX__)
+	if (nmemb > INT_MAX / size)
 		return (NULL);
 	ptr = malloc(mult);
 	if (!ptr)
