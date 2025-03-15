@@ -60,8 +60,7 @@ This project consists in creating a personal library with useful functions to be
 ### Necessary Corrections
 | Function | Error     |
 | :-------- | :------- |
-| ft_substr | SIGSEGV |
-| ft_strtrim | SIGSEGV and 25 lines|
+| ft_substr | Failing memory tests, no seg fault |
 
 ---
 
