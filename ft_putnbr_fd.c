@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: vloureir <vloureir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/24 16:20:07 by vloureir          #+#    #+#             */
-/*   Updated: 2025/02/24 16:31:38 by vloureir         ###   ########.fr       */
+/*   Created: 2025/04/11 14:35:44 by vloureir          #+#    #+#             */
+/*   Updated: 2025/04/13 12:46:11 by vloureir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,28 +15,14 @@
 void	ft_putnbr_fd(int n, int fd)
 {
 	long	nb_l;
-	char	digit;
 
 	nb_l = n;
 	if (nb_l < 0)
 	{
-		write(fd, "-", 1);
+		ft_putchar_fd('-', fd);
 		nb_l = -nb_l;
 	}
-	digit = (nb_l % 10) + '0';
-	if (nb_l >= 10)
+	if (nb_l > 9)
 		ft_putnbr_fd(nb_l / 10, fd);
-	write(fd, &digit, 1);
+	ft_putchar_fd((nb_l % 10) + '0', fd);
 }
-/*
-int	main(void)
-{
-	ft_putnbr_fd(2147483647, 1);
-	write(1, "\n", 1);
-	ft_putnbr_fd(-2147483648, 1);
-	write(1, "\n", 1);
-	ft_putnbr_fd(0, 1);
-	write(1, "\n", 1);
-	ft_putnbr_fd(2147483647, 2);
-	write(1, "\n", 1);
-}*/

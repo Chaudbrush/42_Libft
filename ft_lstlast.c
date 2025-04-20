@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: vloureir <vloureir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/27 17:58:03 by vloureir          #+#    #+#             */
-/*   Updated: 2025/03/04 09:56:25 by vloureir         ###   ########.fr       */
+/*   Created: 2025/04/12 21:23:45 by vloureir          #+#    #+#             */
+/*   Updated: 2025/04/14 17:31:00 by vloureir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 t_list	*ft_lstlast(t_list *lst)
 {
-	t_list	*buffer;
+	t_list	*ptr;
 
 	if (!lst)
 		return (NULL);
-	buffer = lst;
-	while (buffer->next != NULL)
-		buffer = buffer->next;
-	return (buffer);
+	ptr = lst;
+	while (ptr->next)
+		ptr = ptr->next;
+	return (ptr);
 }

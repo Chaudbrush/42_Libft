@@ -5,67 +5,63 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: vloureir <vloureir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/28 17:00:19 by vloureir          #+#    #+#             */
-/*   Updated: 2025/03/15 13:44:35 by vloureir         ###   ########.fr       */
+/*   Created: 2025/04/11 09:39:32 by vloureir          #+#    #+#             */
+/*   Updated: 2025/04/14 16:24:12 by vloureir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	is_set(char *set, char c)
+static int	ft_is_set(char c, char const *set)
 {
 	int	i;
 
-	i = 0;
-	while (set[i])
+	i = -1;
+	while (set[++i])
 	{
 		if (set[i] == c)
 			return (1);
-		i++;
 	}
 	return (0);
 }
 
-size_t	get_fstindex(char const *s1, char const *set)
+static int	ft_first_index(char const *str, char const *set)
 {
 	int	i;
 
 	i = 0;
-	while (is_set((char *)set, s1[i]) && s1[i])
+	while (ft_is_set(str[i], set))
 		i++;
 	return (i);
 }
 
-size_t	get_lstindex(char const *s1, char const *set, size_t len)
+static int	ft_last_index(char const *str, char const *set)
 {
-	while (is_set((char *)set, s1[len - 1]) && len > 0)
-		len--;
-	return (len);
+	int	i;
+
+	i = ft_strlen(str) - 1;
+	while (ft_is_set(str[i], set))
+		i--;
+	return (i);
 }
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	size_t		len;
-	size_t		fst_index;
-	size_t		lst_index;
-	char		*new;
+	int		start;
+	int		end;
+	int		len;
+	char	*new;
 
-	len = ft_strlen((char *)s1);
-	fst_index = get_fstindex(s1, set);
-	len = get_lstindex(s1, set, len);
-	lst_index = len - 1;
-	if (!set)
-		new = ft_strdup(s1);
-	else if (!len)
-	{
-		new = malloc(1);
-		new[0] = 0;
-	}
-	else
-	{
-		len = lst_index - fst_index + 1;
-		new = malloc(sizeof(char) * len + 1);
-		ft_strlcpy(new, (const char *)&s1[fst_index], len + 1);
-	}
+	if (!s1 || !set)
+		return (NULL);
+	start = ft_first_index(s1, set);
+	end = ft_last_index(s1, set);
+	len = end - start + 1;
+	if (len < 1)
+		return (ft_strdup(""));
+	new = malloc(sizeof(char) * (len + 1));
+	if (!new)
+		return (NULL);
+	ft_strlcpy(new, &s1[start], len + 1);
 	return (new);
 }

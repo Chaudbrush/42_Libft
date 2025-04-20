@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: vloureir <vloureir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/24 16:32:26 by vloureir          #+#    #+#             */
-/*   Updated: 2025/02/24 16:38:48 by vloureir         ###   ########.fr       */
+/*   Created: 2025/04/13 12:44:27 by vloureir          #+#    #+#             */
+/*   Updated: 2025/04/13 12:45:35 by vloureir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,6 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
-	int	i;
-
-	i = -1;
-	while (s[++i])
-		write(fd, &s[i], 1);
-	write(fd, "\n", 1);
+	ft_putstr_fd(s, fd);
+	ft_putchar_fd('\n', fd);
 }
-/*
-int	main(void)
-{
-	ft_putendl_fd("hello 42", 1);
-}*/

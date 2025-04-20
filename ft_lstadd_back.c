@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: vloureir <vloureir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/27 18:01:24 by vloureir          #+#    #+#             */
-/*   Updated: 2025/03/04 09:57:15 by vloureir         ###   ########.fr       */
+/*   Created: 2025/04/12 21:23:32 by vloureir          #+#    #+#             */
+/*   Updated: 2025/04/15 13:35:36 by vloureir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,15 +16,13 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*ptr;
 
-	if (!new)
+	if (!new || !lst)
 		return ;
 	if (!*lst)
-	{
 		*lst = new;
-		return ;
+	else
+	{
+		ptr = ft_lstlast(*lst);
+		ptr->next = new;
 	}
-	ptr = *lst;
-	while (ptr->next)
-		ptr = ptr->next;
-	ptr->next = new;
 }

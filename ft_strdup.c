@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: vloureir <vloureir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/25 10:27:03 by vloureir          #+#    #+#             */
-/*   Updated: 2025/02/26 18:58:35 by vloureir         ###   ########.fr       */
+/*   Created: 2025/04/10 11:30:17 by vloureir          #+#    #+#             */
+/*   Updated: 2025/04/14 21:06:14 by vloureir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,14 @@
 char	*ft_strdup(const char *s)
 {
 	int		i;
-	char	*dest;
+	char	*new;
 
-	i = 0;
-	while (s[i])
-		i++;
-	dest = malloc(sizeof(char) * (i + 1));
-	if (!s)
+	new = malloc(sizeof(char) * (ft_strlen(s) + 1));
+	if (!new)
 		return (NULL);
 	i = -1;
 	while (s[++i])
-		dest[i] = s[i];
-	dest[i] = '\0';
-	return (dest);
+		new[i] = s[i];
+	new[i] = '\0';
+	return (new);
 }

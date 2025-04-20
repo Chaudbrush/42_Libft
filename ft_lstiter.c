@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: vloureir <vloureir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/04 09:07:26 by vloureir          #+#    #+#             */
-/*   Updated: 2025/03/04 09:17:34 by vloureir         ###   ########.fr       */
+/*   Created: 2025/04/12 21:22:38 by vloureir          #+#    #+#             */
+/*   Updated: 2025/04/15 09:30:47 by vloureir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,10 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
 	t_list	*ptr;
 
+	if (!lst || !f)
+		return ;
 	ptr = lst;
-	while (ptr != NULL)
+	while (ptr)
 	{
 		f(ptr->content);
 		ptr = ptr->next;

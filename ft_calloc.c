@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: vloureir <vloureir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/27 14:33:15 by vloureir          #+#    #+#             */
-/*   Updated: 2025/02/27 17:36:03 by vloureir         ###   ########.fr       */
+/*   Created: 2025/04/11 12:56:16 by vloureir          #+#    #+#             */
+/*   Updated: 2025/04/14 12:01:56 by vloureir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,15 @@
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
-	size_t		mult;
-	void		*ptr;
+	char	*new;
 
 	if (nmemb == 0 || size == 0)
 		return (malloc(0));
-	mult = nmemb * size;
 	if (nmemb > INT_MAX / size)
 		return (NULL);
-	ptr = malloc(mult);
-	if (!ptr)
+	new = malloc(nmemb * size);
+	if (!new)
 		return (NULL);
-	ft_memset(ptr, 0, mult);
-	return (ptr);
+	ft_memset(new, 0, nmemb * size);
+	return (new);
 }

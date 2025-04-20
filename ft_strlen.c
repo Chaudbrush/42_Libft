@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: vloureir <vloureir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/22 18:46:44 by vloureir          #+#    #+#             */
-/*   Updated: 2025/02/22 18:47:29 by vloureir         ###   ########.fr       */
+/*   Created: 2025/04/10 11:38:38 by vloureir          #+#    #+#             */
+/*   Updated: 2025/04/14 12:44:01 by vloureir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 size_t	ft_strlen(const char *str)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (str[i])

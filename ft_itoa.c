@@ -5,74 +5,56 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: vloureir <vloureir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/24 16:45:01 by vloureir          #+#    #+#             */
-/*   Updated: 2025/02/24 19:10:02 by vloureir         ###   ########.fr       */
+/*   Created: 2025/04/11 15:16:45 by vloureir          #+#    #+#             */
+/*   Updated: 2025/04/15 13:37:06 by vloureir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_swap(char *s1, char *s2)
+static char	*make_str(long nb, int len)
 {
-	char	tmp;
+	char	*new;
 
-	tmp = *s1;
-	*s1 = *s2;
-	*s2 = tmp;
-}
-
-void	ft_build_string(char *s, long nb_l)
-{
-	int		i;
-	int		j;
-
-	i = 0;
-	j = 0;
-	if (nb_l < 0)
+	new = malloc(sizeof(char) * (len + 1));
+	if (!new)
+		return (NULL);
+	if (nb == 0)
+		new[0] = '0';
+	if (nb < 0)
 	{
-		s[i++] = '-';
-		nb_l = -nb_l;
-		j = 1;
+		nb = -nb;
+		new[0] = '-';
 	}
-	if (nb_l == 0)
-		s[i++] = (nb_l % 10) + '0';
-	while (nb_l)
+	new[len] = '\0';
+	while (nb)
 	{
-		s[i++] = (nb_l % 10) + '0';
-		nb_l /= 10;
+		new[--len] = (nb % 10) + '0';
+		nb /= 10;
 	}
-	s[i] = '\0';
-	i--;
-	while (i > j)
-		ft_swap(&s[j++], &s[i--]);
+	return (new);
 }
 
 char	*ft_itoa(int n)
 {
 	int		len;
-	long	nb_l;
-	char	*string;
+	long	nb;
+	char	*new;
 
-	nb_l = n;
+	nb = n;
 	len = 0;
-	while (n)
-	{
+	if (nb == 0)
 		len++;
-		n /= 10;
+	if (nb < 0)
+	{
+		nb = -nb;
+		len++;
 	}
-	if (nb_l <= 0)
-		string = malloc(sizeof(char) * (len + 2));
-	else
-		string = malloc(sizeof(char) * (len + 1));
-	if (!string)
-		return (0);
-	ft_build_string(string, nb_l);
-	return (string);
+	while (nb)
+	{
+		nb /= 10;
+		len++;
+	}
+	new = make_str(n, len);
+	return (new);
 }
-/*
-int	main(void)
-{
-	printf("%s\n", ft_itoa(2147483647));
-	printf("%s\n", ft_itoa(0));
-	printf("%s\n", ft_itoa(-2147483648));
-}*/
