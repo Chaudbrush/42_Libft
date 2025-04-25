@@ -6,7 +6,7 @@
 #    By: vloureir <vloureir@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/12 20:29:48 by vloureir          #+#    #+#              #
-#    Updated: 2025/04/19 11:06:58 by vloureir         ###   ########.fr        #
+#    Updated: 2025/04/21 09:32:34 by vloureir         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -56,7 +56,3 @@ fclean: clean
 	$(RM) bonus
 
 re: fclean all
-
-so:
-	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRC)
-	gcc -nostartfiles -shared -o libft.so $(OBJ)
