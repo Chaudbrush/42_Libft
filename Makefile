@@ -6,9 +6,13 @@
 #    By: vloureir <vloureir@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/12 20:29:48 by vloureir          #+#    #+#              #
-#    Updated: 2025/06/13 11:48:29 by vloureir         ###   ########.fr        #
+#    Updated: 2025/06/13 22:47:32 by vloureir         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+
+ifndef VERBOSE
+MAKEFLAGS += --silent
+endif
 
 NAME := libft.a
 
@@ -34,7 +38,7 @@ SRC_BONUS := src/ft_lstnew.c src/ft_lstadd_front.c src/ft_lstsize.c \
 
 OBJ_BONUS := $(SRC_BONUS:.c=.o)
 
-INC := -I includes
+INC := -Iincludes
 
 HEADER := includes/libft.h
 
@@ -42,16 +46,24 @@ AR := ar -rcs
 
 RM := rm -f
 
+RED := \033[1;30;41m
+
+GREEN := \033[1;30;42m
+
+OFF := \033[0m
+
 all: $(NAME)
 
 $(NAME): $(OBJ)
 	$(AR) $@ $^
+	@echo "$(GREEN) Library Crated $(OFF)"
 
 %.o: %.c $(HEADER)
 	$(CC) $(CFLAGS) -o $@ -c $< $(INC)
 
 bonus: $(OBJ) $(OBJ_BONUS)
 	$(AR) $(NAME) $(OBJ) $(OBJ_BONUS)
+	@echo "$(GREEN) Library Crated $(OFF)"
 	touch bonus
 
 clean:
@@ -60,5 +72,6 @@ clean:
 fclean: clean
 	$(RM) $(NAME)
 	$(RM) bonus
+	@echo "$(RED) Library Deleted $(OFF)"
 
 re: fclean all
